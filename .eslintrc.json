@@ -1,0 +1,61 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+			"plugin:react/recommended",
+			"airbnb",
+			"plugin:prettier/recommended",
+			"plugin:jest/recommended"
+		],
+		"parser": "babel-eslint",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+				"react",
+				"prettier",
+				"jest",
+				"react-hooks"
+    ],
+    "rules": {
+			"object-shorthand": ["error", "always", { "avoidExplicitReturnArrows": true }],
+			"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
+			"import/prefer-deafult-export": "off",
+			"prefer-arrow-callback": "error",
+			"arrow-body-style": ["error", "as-needed"],
+			"object-curly-newline": ["error", {
+				"multiline": true,
+				"consistent": true
+			}],
+			"react/jsx-indent": [2, "tab"],
+			"react/jsx-indent-props": [2, "tab"],
+			"react/jsx-props-no-spreading": "off",
+			"import/prefer-default-export": "off",
+			"no-plusplus": "off",
+			"no-param-reassign": "off",
+			"strict": 0,
+			"quotes": ["error", "backtick"],
+			"jsx-a11y/no-noninteractive-element-interactions": "off",
+			"jsx-a11y/anchor-is-valid": "off",
+			"jsx-a11y/label-has-associated-control": "off"
+		},
+		"settings": {
+			"import/resolver": {
+				"babel-plugin-root-import": {
+					"rootPathSuffix": "src"
+				}
+			}
+		}
+}
